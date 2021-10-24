@@ -14,7 +14,7 @@ export default function NumOfLines(props) {
 
   return (
     <>
-      <h2>Number of Lines to Connect: {numberOfDotsToConnect}</h2>
+      <h2>Number of Dots to Connect: {numberOfDotsToConnect}</h2>
 
       <nav className="tools">
         <ul>
