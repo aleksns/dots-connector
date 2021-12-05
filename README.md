@@ -3,9 +3,9 @@
 # [PLAY DEMO](https://aleksns.github.io/dots-connector/)
 <br />
 
-# Make Dots > Connect them into Lines > Profit??
+# Make the Dots > Connect them into the Lines > Profit??
 
-### Video examle
+### Video example
 
 https://user-images.githubusercontent.com/75623459/144745038-6cea5065-7b13-4e7e-856f-1cb86e2a75cf.mp4
 
