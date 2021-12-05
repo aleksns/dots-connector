@@ -4,11 +4,14 @@
 <br />
 
 # Make Dots > Connect them into Lines > Profit??
+
+### Video examle
+
+https://user-images.githubusercontent.com/75623459/144745038-6cea5065-7b13-4e7e-856f-1cb86e2a75cf.mp4
+
 <br />
 
-//img placeholder
 
-<br />
 
 # Features
 
@@ -34,7 +37,12 @@
 
 - `Animation button - turns ON/OFF animation for the render`
 
+![image](https://user-images.githubusercontent.com/75623459/144744867-50cdaed4-df19-4aac-b039-df56813251a5.png)
+
 ### Miscellaneous
 - `All button images are self-made, except github icon`
 - `Custom CSS`
 - `All buttons have 3 different states: normal, hover, active`
+
+
+###### Made by aleksns
