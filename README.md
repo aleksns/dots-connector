@@ -1,7 +1,10 @@
-## Dots Connector
+# Dots Connector
+
+# [PLAY DEMO](https://aleksns.github.io/dots-connector/)
 <br />
 
 # Make Dots > Connect them into Lines > Profit??
+<br />
 
 //img placeholder
 
