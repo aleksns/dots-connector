@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/dots-connector/static/css/main.071071d8.chunk.css",
+    "main.js": "/dots-connector/static/js/main.91fda0e8.chunk.js",
+    "main.js.map": "/dots-connector/static/js/main.91fda0e8.chunk.js.map",
+    "runtime-main.js": "/dots-connector/static/js/runtime-main.4842f8df.js",
+    "runtime-main.js.map": "/dots-connector/static/js/runtime-main.4842f8df.js.map",
+    "static/js/2.39bedaa9.chunk.js": "/dots-connector/static/js/2.39bedaa9.chunk.js",
+    "static/js/2.39bedaa9.chunk.js.map": "/dots-connector/static/js/2.39bedaa9.chunk.js.map",
+    "static/js/3.f1ab2ee0.chunk.js": "/dots-connector/static/js/3.f1ab2ee0.chunk.js",
+    "static/js/3.f1ab2ee0.chunk.js.map": "/dots-connector/static/js/3.f1ab2ee0.chunk.js.map",
+    "index.html": "/dots-connector/index.html",
+    "static/css/main.071071d8.chunk.css.map": "/dots-connector/static/css/main.071071d8.chunk.css.map",
+    "static/js/2.39bedaa9.chunk.js.LICENSE.txt": "/dots-connector/static/js/2.39bedaa9.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/dots-connector/static/media/btn-trash-can.96b0795f.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.4842f8df.js",
+    "static/js/2.39bedaa9.chunk.js",
+    "static/css/main.071071d8.chunk.css",
+    "static/js/main.91fda0e8.chunk.js"
+  ]
+}
