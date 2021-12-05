@@ -2,33 +2,26 @@ import React from "react";
 import "../App.css";
 
 export default function Canvas(props) {
-  const {
-    canvasRef,
-    canvas2Ref,
-    handleMouseDown,
-    //handleMouseUp,
-    //handleMouseMove,
-  } = props;
+  const { canvasRef, canvas2Ref, handleMouseDown } = props;
 
   return (
-    <div className="canvas-box">
-      <div className="canvas-background"></div>
-      <canvas
-        id="main-layer"
-        onMouseDown={handleMouseDown}
-        //onMouseUp={handleMouseUp}
-        //onMouseMove={handleMouseMove}
-        ref={canvasRef}
-        className="canvas-main"
-      />
-      <canvas
-        id="draft-layer"
-        onMouseDown={handleMouseDown}
-        //onMouseUp={handleMouseUp}
-        //onMouseMove={handleMouseMove}
-        ref={canvas2Ref}
-        className="canvas-draft"
-      />
-    </div>
+    <>
+      <div>
+        <canvas
+          id="main-layer"
+          onMouseDown={handleMouseDown}
+          ref={canvasRef}
+          style={{ zIndex: 0 }}
+          className="canvas"
+        />
+        <canvas
+          id="draft-layer"
+          onMouseDown={handleMouseDown}
+          ref={canvas2Ref}
+          style={{ zIndex: 1 }}
+          className="canvas"
+        />
+      </div>
+    </>
   );
 }

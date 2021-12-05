@@ -13,30 +13,30 @@ export default function NumOfLines(props) {
   };
 
   return (
-    <>
-      <h2>Number of Dots to Connect: {numberOfDotsToConnect}</h2>
-
-      <nav className="tools">
-        <ul>
-          <li style={{ borderRadius: "5px" }}>
-            <label>{"▼"}</label>
-            <input type="checkbox" id="drop-1"></input>
-            <ul>
-              {items.map((item) => (
-                <li>
-                  <option
-                    key={item.id}
-                    value={item.value}
-                    onClick={handleNumberOfDotsToConnect}
-                  >
-                    {item.id}
-                  </option>
-                </li>
-              ))}
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </>
+    <div className="container-with-border">
+      <div className="wrapper-num-of-lines">
+        <h4>Number of Dots to Connect: {numberOfDotsToConnect}</h4>
+        <nav>
+          <ul>
+            <li style={{ borderRadius: "2px" }}>
+              <label>{"▼"}</label>
+              <ul>
+                {items.map((item) => (
+                  <li>
+                    <option
+                      key={item.id}
+                      value={item.value}
+                      onClick={handleNumberOfDotsToConnect}
+                    >
+                      {item.id}
+                    </option>
+                  </li>
+                ))}
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   );
 }

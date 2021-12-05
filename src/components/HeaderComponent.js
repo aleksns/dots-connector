@@ -19,21 +19,22 @@ export default function HeaderComponent(props) {
 
   return (
     <>
-      <div className="background-main"></div>
-      <ToolsContainer
-        clearAll={clearAll}
-        numberOfDotsToConnect={numberOfDotsToConnect}
-        setNumberOfDotsToConnect={setNumberOfDotsToConnect}
-        isAnimatedRender={isAnimatedRender}
-        setIsAnimatedRender={setIsAnimatedRender}
-        currentColor={currentColor}
-        setCurrentColor={setCurrentColor}
-        isRandomColor={isRandomColor}
-        setIsRandomColor={setIsRandomColor}
-        width={width}
-        setWidth={setWidth}
-      />
-      <GithubLinkWithIcon />
+      <aside>
+        <ToolsContainer
+          clearAll={clearAll}
+          numberOfDotsToConnect={numberOfDotsToConnect}
+          setNumberOfDotsToConnect={setNumberOfDotsToConnect}
+          isAnimatedRender={isAnimatedRender}
+          setIsAnimatedRender={setIsAnimatedRender}
+          currentColor={currentColor}
+          setCurrentColor={setCurrentColor}
+          isRandomColor={isRandomColor}
+          setIsRandomColor={setIsRandomColor}
+          width={width}
+          setWidth={setWidth}
+        />
+        <GithubLinkWithIcon />
+      </aside>
     </>
   );
 }

@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../App.css";
 import Clear from "../tools/Clear";
 import ColorTools from "../tools/ColorTools";
 import NumOfLines from "../tools/NumOfLines";
-import ToggleColorAnim from "../tools/ToggleColorAnim";
+import ToggleColorAndAnim from "../tools/ToggleColorAndAnim";
 import WidthTools from "../tools/WidthTools";
 
 export default function ToolsContainer(props) {
@@ -22,26 +22,27 @@ export default function ToolsContainer(props) {
   } = props;
 
   return (
-    <div className="tools-container-box">
-      <div className="tools-border-1"></div>
-      <div className="tools-border-2"></div>
-
+    <>
       <Clear clearAll={clearAll} />
+
       <NumOfLines
         numberOfDotsToConnect={numberOfDotsToConnect}
         setNumberOfDotsToConnect={setNumberOfDotsToConnect}
       />
+
       <ColorTools
         currentColor={currentColor}
         setCurrentColor={setCurrentColor}
       />
+
       <WidthTools width={width} setWidth={setWidth} />
-      <ToggleColorAnim
+
+      <ToggleColorAndAnim
         isAnimatedRender={isAnimatedRender}
         setIsAnimatedRender={setIsAnimatedRender}
         isRandomColor={isRandomColor}
         setIsRandomColor={setIsRandomColor}
       />
-    </div>
+    </>
   );
 }

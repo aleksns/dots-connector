@@ -56,7 +56,8 @@ export default function App() {
     listOfDots,
     clearTheCanvas,
     isAnimatedRender,
-    width
+    width,
+    getScaledMouseCoordinates
   );
   const { drawLine } = Line(
     contextRef,
@@ -74,20 +75,17 @@ export default function App() {
       if (isRandomColor) {
         setCurrentColor(getRandomColor(e));
       }
-      drawLine(e);
+      drawLine();
     }
   };
 
   useEffect(() => {
-    let heightCustomValue = 80;
-
+    //main canvas
     const canvas = canvasRef.current;
-    canvas.width = (window.innerWidth - 2) * 2;
-    canvas.height = (window.innerHeight - heightCustomValue) * 2;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
     const context = canvas.getContext("2d");
-    canvas.style.width = `${window.innerWidth - 2}px`;
-    canvas.style.height = `${window.innerHeight - heightCustomValue}px`;
-    context.scale(2, 2);
 
     context.lineCap = "round";
     context.strokeStyle = currentColor;
@@ -95,13 +93,12 @@ export default function App() {
     context.lineJoin = "round";
     contextRef.current = context;
 
+    //draft canvas
     const canvas2 = canvas2Ref.current;
-    canvas2.width = (window.innerWidth - 2) * 2;
-    canvas2.height = (window.innerHeight - heightCustomValue) * 2;
+    canvas2.width = window.innerWidth;
+    canvas2.height = window.innerHeight;
+
     const context2 = canvas2.getContext("2d");
-    canvas2.style.width = `${window.innerWidth - 2}px`;
-    canvas2.style.height = `${window.innerHeight - heightCustomValue}px`;
-    context2.scale(2, 2);
 
     context2.lineCap = "round";
     context2.strokeStyle = currentColor;
@@ -109,6 +106,25 @@ export default function App() {
     context2.lineJoin = "round";
     context2Ref.current = context2;
   }, []);
+
+  function getScaledMouseCoordinates({ nativeEvent }) {
+    // calculate coordinates for the current resolution
+    var bounds = canvas2Ref.current.getBoundingClientRect();
+    const { offsetX, offsetY } = nativeEvent;
+
+    var x = offsetX;
+    var y = offsetY;
+    x = x / bounds.width;
+    y = y / bounds.height;
+
+    x = Math.floor(x * canvas2Ref.current.width);
+    y = Math.floor(y * canvas2Ref.current.height);
+
+    return {
+      x,
+      y,
+    };
+  }
 
   return (
     <>
@@ -129,8 +145,6 @@ export default function App() {
         canvasRef={canvasRef}
         canvas2Ref={canvas2Ref}
         handleMouseDown={handleMouseDown}
-        //handleMouseUp={handleMouseUp}
-        //handleMouseMove={handleMouseMove}
       />
     </>
   );

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../App.css";
 
 export default function Dot(
@@ -8,7 +8,8 @@ export default function Dot(
   listOfDots,
   clearTheCanvas,
   isAnimatedRender,
-  width
+  width,
+  getScaledMouseCoordinates
 ) {
   var newDot;
   var opacity;
@@ -18,15 +19,15 @@ export default function Dot(
   function drawDot({ nativeEvent }) {
     contextRef.current.lineWidth = width;
 
-    const { offsetX, offsetY } = nativeEvent;
+    var { x, y } = getScaledMouseCoordinates({ nativeEvent });
     newDot = {};
-    newDot = [offsetX, offsetY];
+    newDot = [x, y];
 
     addDotToList(newDot);
 
     contextRef.current.beginPath();
-    contextRef.current.moveTo(offsetX, offsetY);
-    contextRef.current.lineTo(offsetX, offsetY);
+    contextRef.current.moveTo(x, y);
+    contextRef.current.lineTo(x, y);
     contextRef.current.stroke();
     contextRef.current.closePath();
 

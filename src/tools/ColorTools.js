@@ -9,17 +9,16 @@ export default function ColorTools(props) {
     setCurrentColor(newColor);
   };
   return (
-    <>
+    <div className="container-with-border">
       <h4>Color</h4>
-
       <input
         id="color-picker"
         type="color"
         name="color"
         value={currentColor}
-        className="color-picker tools"
+        className="btn tools"
         onChange={handleColorPicker}
       ></input>
-    </>
+    </div>
   );
 }

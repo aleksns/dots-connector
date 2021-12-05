@@ -9,19 +9,16 @@ export default function WidthTools(props) {
   };
 
   return (
-    <>
-      <h4 style={{ width: "60px" }}>Width: {width}</h4>
-
-      <div className="width-slider">
-        <input
-          defaultValue={width}
-          type="range"
-          min="8"
-          max="50"
-          onChange={handleWidthChange}
-          className="slider-width-range"
-        />
-      </div>
-    </>
+    <div className="container-with-border">
+      <h4>Width: {width}</h4>
+      <input
+        defaultValue={width}
+        type="range"
+        min="8"
+        max="50"
+        onChange={handleWidthChange}
+        className="tools"
+      />
+    </div>
   );
 }

@@ -5,25 +5,21 @@ import "../App.css";
 
 const useStyles = makeStyles((theme) => ({
   gitLink: {
-    position: "relative",
-    top: "-5px",
-    right: "-5px",
-    textDecoration: "none",
+    position: "absolute",
+    bottom: "0",
     color: "#ffffff",
     fontFamily: "Century Gothic",
     fontSize: "1.1rem",
     fontWeight: "600",
     "&:hover": {
       filter:
-        "invert(48%) sepia(13%) saturate(3207%) hue-rotate(170deg) brightness(100%) contrast(90%)",
+        "invert(48%) sepia(13%) saturate(3207%) hue-rotate(360deg) brightness(100%) contrast(190%)",
     },
   },
   gitLogo: {
-    position: "relative",
-    top: "5px",
-    right: "5px",
     width: "40px",
     height: "40px",
+    marginRight: "2px",
   },
 }));
 
@@ -37,7 +33,7 @@ export default function GithubLinkWithIcon() {
   };
 
   return (
-    <div className="git-link-box">
+    <div className="container-git-link">
       <Link
         className={classes.gitLink}
         component="button"
