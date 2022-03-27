@@ -9,18 +9,13 @@ const useStyles = makeStyles((theme) => ({
     bottom: "0",
     color: "#ffffff",
     fontFamily: "Century Gothic",
-    fontSize: "1.1rem",
+    // fontSize: "1.1rem",
     fontWeight: "600",
     "&:hover": {
       filter:
         "invert(48%) sepia(13%) saturate(3207%) hue-rotate(360deg) brightness(100%) contrast(190%)",
     },
-  },
-  gitLogo: {
-    width: "40px",
-    height: "40px",
-    marginRight: "2px",
-  },
+  }
 }));
 
 export default function GithubLinkWithIcon() {
@@ -35,12 +30,12 @@ export default function GithubLinkWithIcon() {
   return (
     <div className="container-git-link">
       <Link
-        className={classes.gitLink}
+        className={`git-text ${classes.gitLink}`}
         component="button"
-        underline="disabled"
+        underline="none"
         onClick={openInNewTab}
       >
-        <img src={GitLogo} className={classes.gitLogo}></img>Github: Aleksns
+        <img src={GitLogo} className="git-logo"></img>Github: Aleksns
       </Link>
     </div>
   );

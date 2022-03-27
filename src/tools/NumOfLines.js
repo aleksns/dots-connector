@@ -22,9 +22,8 @@ export default function NumOfLines(props) {
               <label>{"▼"}</label>
               <ul>
                 {items.map((item) => (
-                  <li>
+                  <li key={item.id}>
                     <option
-                      key={item.id}
                       value={item.value}
                       onClick={handleNumberOfDotsToConnect}
                     >

@@ -12,19 +12,32 @@
 div {
   display: flex;
   flex-direction: row;
+  height: 100%;
 }
 
 aside {
   background-color: var(--main-background);
   display: flex;
   flex-direction: column;
-  overflow: auto;
-  width: 200px;
+  /* overflow: auto; */
+  width: 15%;
   height: 100vh;
-  position: sticky;
+  /* position: sticky; */
   top: 0;
   left: 0;
   z-index: 2;
+}
+
+.canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* width: 86.5vw; */
+  /* height: 100vh; */
+  /* flex-grow: 0;
+  flex-shrink: 0; */
 }
 
 h3,
@@ -39,28 +52,12 @@ h5 {
   transition-duration: var(--transition-time);
 }
 
-h3 {
-  font-size: 19px;
-}
-
-h4 {
-  font-size: 15px;
-}
-
 h5 {
   font-size: 11px;
 }
 
 .text-highlighted {
   color: var(--orange-background-dark);
-}
-
-.canvas {
-  position: absolute;
-  width: 86.5vw;
-  height: 100vh;
-  flex-grow: 0;
-  flex-shrink: 0;
 }
 
 .container-with-border {
@@ -77,7 +74,17 @@ h5 {
   position: relative;
   height: 100%;
   white-space: nowrap;
-  margin: 2em 1em 1.5em;
+  margin: 0 7% 5%;
+}
+
+.git-logo {
+  width: 40px;
+  height: 40px;
+  margin-right: 2px;
+}
+
+.git-text {
+  font-size: 1.1rem;
 }
 
 .wrapper-clear {
@@ -188,7 +195,7 @@ input[type="color"]::-webkit-color-swatch {
 /* Chrome */
 input[type="range"] {
   overflow: hidden;
-  width: 110px;
+  width: 70%;
   -webkit-appearance: none;
   background-color: #eaecee;
   border-radius: 2px;
@@ -205,7 +212,7 @@ input[type="range"]::-webkit-slider-thumb:hover {
 }
 
 input[type="range"]::-webkit-slider-thumb {
-  width: 10px;
+  width: 12%;
   -webkit-appearance: none;
   height: 15px;
   cursor: pointer;
@@ -269,6 +276,7 @@ nav ul {
   list-style: none;
   position: relative;
   width: 100%;
+
 }
 
 nav ul li ul li:hover {
@@ -297,4 +305,46 @@ nav ul li:hover > ul {
 .toggle,
 [id^="drop"] {
   display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  aside {
+   width: 25%;
+  }
+
+  h3 {
+    font-size: 10px;
+  }
+
+  h4 {
+    font-size: 9px;
+  }
+
+  h5 {
+    font-size: 9px;
+  }
+
+  .btn {
+    height: 30px;
+    width: 30px;
+  }
+
+  nav ul {
+    left: 25%;
+    width: 50%
+  }
+
+  .wrapper-toggle-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .git-logo {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .git-text {
+    font-size: 0.4rem;
+  }
 }
