@@ -276,7 +276,6 @@ nav ul {
   list-style: none;
   position: relative;
   width: 100%;
-
 }
 
 nav ul li ul li:hover {
@@ -346,5 +345,10 @@ nav ul li:hover > ul {
   
   .git-text {
     font-size: 0.4rem;
+  }
+
+  nav ul li ul li {
+    width: 200%;
+    left: -50%;
   }
 }
