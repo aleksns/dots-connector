@@ -23,7 +23,7 @@ export default function GithubLinkWithIcon() {
   const classes = useStyles();
 
   const openInNewTab = () => {
-    const newWindow = window.open(gitUrl, "_blank", "noopener,noreferrer");
+    const newWindow = window.open(gitUrl, "_blank", "noopener noreferrer");
     if (newWindow) newWindow.opener = null;
   };
 
