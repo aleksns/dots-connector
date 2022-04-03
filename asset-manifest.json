@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/dots-connector/static/css/main.535b10c5.css",
-    "main.js": "/dots-connector/static/js/main.1aaf1be5.js",
+    "main.js": "/dots-connector/static/js/main.02cfddd1.js",
     "static/js/787.d22924a0.chunk.js": "/dots-connector/static/js/787.d22924a0.chunk.js",
     "static/media/btn-animation.png": "/dots-connector/static/media/btn-animation.c07245db9203a3cd3308.png",
     "static/media/btn-random-color.png": "/dots-connector/static/media/btn-random-color.fe780823dc88690e394d.png",
     "static/media/btn-trash-can.png": "/dots-connector/static/media/btn-trash-can.96b0795f7b3f20609035.png",
     "index.html": "/dots-connector/index.html",
     "main.535b10c5.css.map": "/dots-connector/static/css/main.535b10c5.css.map",
-    "main.1aaf1be5.js.map": "/dots-connector/static/js/main.1aaf1be5.js.map",
+    "main.02cfddd1.js.map": "/dots-connector/static/js/main.02cfddd1.js.map",
     "787.d22924a0.chunk.js.map": "/dots-connector/static/js/787.d22924a0.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.535b10c5.css",
-    "static/js/main.1aaf1be5.js"
+    "static/js/main.02cfddd1.js"
   ]
 }
